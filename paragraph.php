@@ -1,7 +1,9 @@
 <?php
+var_dump($_GET['paragraph']);
 $paragraph = $_GET['paragraph'];
 $badWord = $_GET['badWord'];
-$cleanParagraph = str_replace($badWord, "Dolly", $paragraph);
+$cleanParagraph = str_replace($badWord, "***", $paragraph);
+$length = strlen($paragraph);
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +14,8 @@ $cleanParagraph = str_replace($badWord, "Dolly", $paragraph);
     <title>Document</title>
 </head>
 <body>
+    <p> <?php echo $paragraph ?> la lunghezza del paragrafo è <?php echo $length ?></p>
     <p> <?php echo $cleanParagraph ?></p>
+    <p> <?php echo $length ?></p>
 </body>
 </html>
